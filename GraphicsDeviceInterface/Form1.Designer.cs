@@ -45,7 +45,10 @@ namespace GraphicsDeviceInterface
             this.LineButton = new System.Windows.Forms.ToolStripButton();
             this.CircleButton = new System.Windows.Forms.ToolStripButton();
             this.RectangleButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.Seperator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ResizeButton = new System.Windows.Forms.ToolStripButton();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.ColorPickerButton = new System.Windows.Forms.ToolStripButton();
             this.IOToolStrip.SuspendLayout();
             this.PaintToolsStrip.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +69,7 @@ namespace GraphicsDeviceInterface
             this.helpToolStripButton});
             this.IOToolStrip.Location = new System.Drawing.Point(0, 0);
             this.IOToolStrip.Name = "IOToolStrip";
-            this.IOToolStrip.Size = new System.Drawing.Size(2816, 47);
+            this.IOToolStrip.Size = new System.Drawing.Size(2485, 46);
             this.IOToolStrip.TabIndex = 0;
             this.IOToolStrip.Text = "I/O Tools";
             // 
@@ -76,7 +79,7 @@ namespace GraphicsDeviceInterface
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.newToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.newToolStripButton.Text = "&New";
             // 
             // openToolStripButton
@@ -85,7 +88,7 @@ namespace GraphicsDeviceInterface
             this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
             this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.openToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.openToolStripButton.Text = "&Open";
             // 
             // saveToolStripButton
@@ -94,7 +97,7 @@ namespace GraphicsDeviceInterface
             this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.saveToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.saveToolStripButton.Text = "&Save";
             // 
             // printToolStripButton
@@ -103,13 +106,13 @@ namespace GraphicsDeviceInterface
             this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
             this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.printToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.printToolStripButton.Text = "&Print";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 47);
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 46);
             // 
             // cutToolStripButton
             // 
@@ -117,7 +120,7 @@ namespace GraphicsDeviceInterface
             this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
             this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.cutToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.cutToolStripButton.Text = "C&ut";
             // 
             // copyToolStripButton
@@ -126,7 +129,7 @@ namespace GraphicsDeviceInterface
             this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
             this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.copyToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.copyToolStripButton.Text = "&Copy";
             // 
             // pasteToolStripButton
@@ -135,13 +138,13 @@ namespace GraphicsDeviceInterface
             this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
             this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.pasteToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.pasteToolStripButton.Text = "&Paste";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 46);
             // 
             // helpToolStripButton
             // 
@@ -149,7 +152,7 @@ namespace GraphicsDeviceInterface
             this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
             this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(58, 40);
+            this.helpToolStripButton.Size = new System.Drawing.Size(52, 40);
             this.helpToolStripButton.Text = "He&lp";
             // 
             // PaintToolsStrip
@@ -159,12 +162,14 @@ namespace GraphicsDeviceInterface
             this.LineButton,
             this.CircleButton,
             this.RectangleButton,
-            this.toolStripSeparator2});
-            this.PaintToolsStrip.Location = new System.Drawing.Point(0, 47);
-            this.PaintToolsStrip.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Seperator1,
+            this.ResizeButton,
+            this.ColorPickerButton});
+            this.PaintToolsStrip.Location = new System.Drawing.Point(0, 46);
+            this.PaintToolsStrip.Margin = new System.Windows.Forms.Padding(4);
             this.PaintToolsStrip.Name = "PaintToolsStrip";
             this.PaintToolsStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.PaintToolsStrip.Size = new System.Drawing.Size(2816, 103);
+            this.PaintToolsStrip.Size = new System.Drawing.Size(2485, 102);
             this.PaintToolsStrip.TabIndex = 1;
             this.PaintToolsStrip.Text = "Paint Tools";
             this.PaintToolsStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.PaintToolsStrip_ItemClicked);
@@ -205,25 +210,45 @@ namespace GraphicsDeviceInterface
             this.RectangleButton.Text = "Rectangle";
             this.RectangleButton.ToolTipText = "Rectangle";
             // 
-            // toolStripSeparator2
+            // Seperator1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 103);
+            this.Seperator1.Margin = new System.Windows.Forms.Padding(16, 0, 16, 0);
+            this.Seperator1.Name = "Seperator1";
+            this.Seperator1.Size = new System.Drawing.Size(6, 102);
+            // 
+            // ResizeButton
+            // 
+            this.ResizeButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ResizeButton.Image = ((System.Drawing.Image)(resources.GetObject("ResizeButton.Image")));
+            this.ResizeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ResizeButton.Name = "ResizeButton";
+            this.ResizeButton.Size = new System.Drawing.Size(96, 96);
+            this.ResizeButton.Text = "Resize";
+            this.ResizeButton.ToolTipText = "Resize";
+            // 
+            // ColorPickerButton
+            // 
+            this.ColorPickerButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ColorPickerButton.Image = ((System.Drawing.Image)(resources.GetObject("ColorPickerButton.Image")));
+            this.ColorPickerButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ColorPickerButton.Name = "ColorPickerButton";
+            this.ColorPickerButton.Size = new System.Drawing.Size(96, 96);
+            this.ColorPickerButton.Text = "ColorPicker";
+            this.ColorPickerButton.ToolTipText = "Color Picker";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2816, 1703);
+            this.ClientSize = new System.Drawing.Size(2485, 1537);
             this.Controls.Add(this.PaintToolsStrip);
             this.Controls.Add(this.IOToolStrip);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.IOToolStrip.ResumeLayout(false);
@@ -252,7 +277,10 @@ namespace GraphicsDeviceInterface
         private System.Windows.Forms.ToolStripButton CircleButton;
         private System.Windows.Forms.ToolStripButton LineButton;
         private System.Windows.Forms.ToolStripButton RectangleButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator Seperator1;
+        private System.Windows.Forms.ToolStripButton ResizeButton;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ToolStripButton ColorPickerButton;
     }
 }
 
